@@ -1,15 +1,20 @@
+import { useState } from "react";
 import { ChevronDown, MapPin, Calendar, Users } from "lucide-react";
 import { stats } from "@/data/data";
 
 export function Hero() {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
+      {/* Background with fallback gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-teal-900 to-emerald-900">
         <img
           src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80"
           alt="Beautiful tropical beach"
-          className="h-full w-full object-cover"
+          className={`h-full w-full object-cover transition-opacity duration-700 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={() => setImgLoaded(true)}
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-gray-900/30" />
