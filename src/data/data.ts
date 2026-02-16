@@ -276,7 +276,7 @@ export const testimonials: Testimonial[] = [
     avatar: "JC",
     location: "Toronto, Canada",
     rating: 5,
-    text: "The Bali retreat exceeded all expectations. The yoga sessions, temple visits, and the incredible food made it a life-changing experience. Highly recommend Wanderlust!",
+    text: "The Bali retreat exceeded all expectations. The yoga sessions, temple visits, and the incredible food made it a life-changing experience. Highly recommend Voyazure!",
     tour: "Bali Spiritual Retreat",
   },
   {
