@@ -143,3 +143,6 @@ export function Footer() {
     </footer>
   );
 }
+
+
+
