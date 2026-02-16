@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Star, Clock, Users, Check, Heart } from "lucide-react";
 import { tourPackages } from "@/data/data";
+import { FallbackImage } from "./FallbackImage";
 
 const categories = ["All", "Adventure", "Wellness", "Cultural", "Luxury", "Wildlife"];
 
@@ -63,11 +64,12 @@ export function Packages() {
               className="group rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 overflow-hidden flex flex-col"
             >
               {/* Image */}
-              <div className="relative h-52 overflow-hidden">
-                <img
+              <div className="relative h-52 overflow-hidden bg-gradient-to-br from-teal-400 to-emerald-500">
+                <FallbackImage
                   src={pkg.image}
                   alt={pkg.title}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fallbackText={pkg.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
